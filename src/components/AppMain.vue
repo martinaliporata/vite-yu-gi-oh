@@ -14,7 +14,7 @@
         methods: {
             getCharacters(){
                 axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0')
-                then.(function(response){
+                .then(function(response){
                     console.log(response);
                 })
                 .catch(function(error){
@@ -36,7 +36,7 @@
             ciao
         </h1>
     </main>
-    <ListCards/>
+    <ListCards :characters="character"/>
 </template>
 
 <style lang="scss" scoped>
