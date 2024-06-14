@@ -12,4 +12,5 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+    @use '../node_modules/bootstrap/scss/bootstrap.scss';
 </style>

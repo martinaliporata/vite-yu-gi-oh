@@ -20,14 +20,11 @@
 <template>
     <section class="characters-container">
         <div class="row">
-            <h2 class="col-12">
-                Main section
-            </h2>
             <div class="col-12">
                 <div class="row">
-                    <article v-for="character in characters" :key="index" class="col-3">
+                    <article v-for="(character,index) in characters" :key="index" class="col-3">
                         <div class="card w-100">
-                            <img :src="character.card_images.0.image_url" alt="">
+                            <img :src="character.card_images[0].image_url" alt="">
                             <h4>
                                 {{character.name }}
                             </h4>
