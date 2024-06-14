@@ -36,7 +36,7 @@
     <main> 
         <label for="choice">Choose according to the archetype</label>
         <select name="archetype" id="archetype">
-            <option v-for="" value=""></option>
+            <option value=""></option>
         </select>
         <!-- lo passo via props a listcards -->
         <ListCards :characters="this.characters"/>
