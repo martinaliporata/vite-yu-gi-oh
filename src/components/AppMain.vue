@@ -8,6 +8,9 @@
         },
         data() {
             return {
+                characters: [],
+                archetypes: [],
+                selectedArchetype: '',
             }
         },      
         methods: {
@@ -56,3 +59,28 @@
         }
     }
 </script>
+
+<template>
+    <main>
+        <label for="choice">Choose according to the archetype</label>
+        <select name="archetype" id="archetype" v-model="selectedArchetype" @change="handleChange">
+            <option value="">
+                All values
+            </option>
+            <option v-for="(archetype,index) in archetypes" :key="index" :value="archetype.archetype_name">
+                {{ archetype.archetype_name }}
+            </option>
+        </select>
+        <!-- lo passo via props a listcards -->
+        <ListCards :characters="this.characters"/>
+    </main>
+</template>
+
+<style lang="scss">
+    @use '../node_modules/bootstrap/scss/bootstrap.scss';
+    @use '../style/partials/variabili' as *;
+
+    main {
+        background-color: $orange;
+    }
+</style>
